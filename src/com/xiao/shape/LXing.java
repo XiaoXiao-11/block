@@ -47,28 +47,28 @@ public class LXing extends Shape {
     public void blockCompose(int x,int y){
         switch (status){
             case 1:
-                blocks[0] = new Block(x * Block.width, y * Block.height);
-                blocks[1] = new Block(x * Block.width, (y + 1) * Block.height);
-                blocks[2] = new Block(x * Block.width, (y + 2) * Block.height);
-                blocks[3] = new Block((x + 1) * Block.width, (y + 2) * Block.height);
+                blocks[0] = new Block(x, y);
+                blocks[1] = new Block(x, y + 1);
+                blocks[2] = new Block(x, y + 2);
+                blocks[3] = new Block(x + 1, y + 2);
                 break;
             case 2:
-                blocks[0] = new Block((x + 2) * Block.width, (y + 2) * Block.height);
-                blocks[1] = new Block((x + 1) * Block.width, (y + 2) * Block.height);
-                blocks[2] = new Block(x * Block.width, (y + 2) * Block.height);
-                blocks[3] = new Block(x * Block.width, (y + 3) * Block.height);
+                blocks[0] = new Block(x + 2, y + 2);
+                blocks[1] = new Block(x + 1, y + 2);
+                blocks[2] = new Block(x, y + 2);
+                blocks[3] = new Block(x, y + 3);
                 break;
             case 3:
-                blocks[0] = new Block(x * Block.width, (y + 4) * Block.height);
-                blocks[1] = new Block(x * Block.width, (y + 3) * Block.height);
-                blocks[2] = new Block(x * Block.width, (y + 2) * Block.height);
-                blocks[3] = new Block((x - 1) * Block.width, (y + 2) * Block.height);
+                blocks[0] = new Block(x, y + 4);
+                blocks[1] = new Block(x, y + 3);
+                blocks[2] = new Block(x, y + 2);
+                blocks[3] = new Block(x - 1, y + 2);
                 break;
             case 4:
-                blocks[0] = new Block((x - 2) * Block.width, (y + 2) * Block.height);
-                blocks[1] = new Block((x - 1) * Block.width, (y + 2) * Block.height);
-                blocks[2] = new Block(x * Block.width, (y + 2) * Block.height);
-                blocks[3] = new Block(x * Block.width, (y + 1) * Block.height);
+                blocks[0] = new Block((x - 2), (y + 2));
+                blocks[1] = new Block((x - 1), (y + 2));
+                blocks[2] = new Block(x, (y + 2));
+                blocks[3] = new Block(x, (y + 1));
                 break;
         }
     }

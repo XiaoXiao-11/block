@@ -7,10 +7,10 @@ import com.xiao.base.Shape;
 /**
  * 方形
  */
-public class FangXing extends Shape {
+public class OXing extends Shape {
     private int x = 0;
     private int y = 0;
-    public FangXing(int x){
+    public OXing(int x){
         this.x = x;
         blockCompose(x,y);
     }
@@ -45,10 +45,10 @@ public class FangXing extends Shape {
     public void blockCompose(int x,int y){
         switch (status){
             case 1:
-                blocks[0] = new Block(x * Block.width, y * Block.height);
-                blocks[1] = new Block((x + 1) * Block.width, y * Block.height);
-                blocks[2] = new Block(x * Block.width, (y + 1) * Block.height);
-                blocks[3] = new Block((x + 1) * Block.width, (y + 1) * Block.height);
+                blocks[0] = new Block(x, y);
+                blocks[1] = new Block(x + 1, y);
+                blocks[2] = new Block(x, y + 1);
+                blocks[3] = new Block(x + 1, y + 1);
                 break;
         }
     }

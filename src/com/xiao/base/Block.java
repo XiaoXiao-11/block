@@ -10,8 +10,8 @@ public class Block {
     public final static int height = 20;
 
     public Block( int x,int y) {
-        this.y = y;
-        this.x = x;
+        this.y = y * Block.width;
+        this.x = x * Block.height;
     }
 
     public int getY() {

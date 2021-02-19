@@ -18,10 +18,10 @@ public final class ShapeFactory {
                 shape = new LXing(x);
                 break;
             case 2:
-                shape = new LLXing(x);
+                shape = new JXing(x);
                 break;
             case 3:
-                shape = new FangXing(x);
+                shape = new OXing(x);
                 break;
             case 4:
                 shape = new TXing(x);
@@ -33,7 +33,7 @@ public final class ShapeFactory {
                 shape = new ZXing(x);
                 break;
             case 7:
-                shape = new ZZXing(x);
+                shape = new SXing(x);
                 break;
         }
 

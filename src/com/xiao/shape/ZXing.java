@@ -47,16 +47,16 @@ public class ZXing extends Shape {
     public void blockCompose(int x,int y){
         switch (status){
             case 1:
-                blocks[0] = new Block(x * Block.width, y * Block.height);
-                blocks[1] = new Block((x + 1) * Block.width, y * Block.height);
-                blocks[2] = new Block((x + 1) * Block.width, (y + 1) * Block.height);
-                blocks[3] = new Block((x + 2) * Block.width, (y + 1) * Block.height);
+                blocks[0] = new Block(x, y);
+                blocks[1] = new Block(x + 1, y);
+                blocks[2] = new Block(x + 1, y + 1);
+                blocks[3] = new Block(x + 2, y + 1);
                 break;
             case 2:
-                blocks[0] = new Block((x + 1) * Block.width, (y - 1) * Block.height);
-                blocks[1] = new Block((x + 1) * Block.width, y * Block.height);
-                blocks[2] = new Block(x * Block.width, y * Block.height);
-                blocks[3] = new Block(x * Block.width, (y + 1) * Block.height);
+                blocks[0] = new Block(x + 1, y - 1);
+                blocks[1] = new Block(x + 1, y);
+                blocks[2] = new Block(x, y);
+                blocks[3] = new Block(x, y + 1);
                 break;
         }
     }
