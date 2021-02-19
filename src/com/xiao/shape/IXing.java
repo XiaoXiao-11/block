@@ -17,12 +17,12 @@ public class IXing extends Shape {
     }
     @Override
     public void change(){
-        status = status == 4 ? 1 : status + 1;
+        status = status == 2 ? 1 : status + 1;
         blockCompose(x,y);
     }
     @Override
     public void back(){
-        status = status == 1 ? 4 : status - 1;
+        status = status == 1 ? 2 : status - 1;
         blockCompose(x,y);
     }
     @Override
@@ -57,18 +57,6 @@ public class IXing extends Shape {
                 blocks[1] = new Block(x, y + 1);
                 blocks[2] = new Block(x - 1, y + 1);
                 blocks[3] = new Block(x + 2, y + 1);
-                break;
-            case 3:
-                blocks[0] = new Block(x,y + 2 );
-                blocks[1] = new Block(x,y + 1);
-                blocks[2] = new Block(x,y);
-                blocks[3] = new Block(x,y - 1);
-                break;
-            case 4:
-                blocks[0] = new Block(x - 1,y + 1);
-                blocks[1] = new Block(x,y + 1);
-                blocks[2] = new Block(x + 1,y + 1);
-                blocks[3] = new Block(x + 2,y + 1);
                 break;
         }
     }
